@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  font-family: "DM Sans", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* Colors */
+  --color-white: #f5f5f5;
+  --color-violet: #432755;
+  --color-violet2: #3b214b;
+  --color-dark-violet: #220e2d;
+  --color-category-border: #432755;
+  --color-linear: #e9ad83;
+  --color-gradient: #9b1fe8;
+
+  /* Line Height */
+  --leading-90: 90%;
+  --leading-100: 100%;
+  --leading-110: 110%;
+  --leading-120: 120%;
+  --leading-125: 125%;
+  --leading-130: 130%;
+  --leading-135: 135%;
+  --leading-140: 140%;
+  --leading-150: 150%;
+
+  /* Font-Size */
+  --text-custom-sm: 15px;
+  --text-custom-xs: 13px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.background-image {
+  background: url("/images/svg/input-bg.svg");
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    gap: 10px;
+    background: white;
+    color: black;
+    transform: translateX(300%);
+    transition: all 0.4s ease-in-out;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .menu.show {
+    transform: translateX(0%);
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    font-size: 24px;
+  }
 }
