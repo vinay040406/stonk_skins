@@ -1,0 +1,55 @@
+"use client";
+import { useRef } from "react";
+import Icons from "./common/Icons";
+import Slider from "./common/Slider";
+
+const SliderWrapper = ({ className, bgImage }) => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  return (
+    <div
+      style={{ backgroundImage: bgImage ? `url('${bgImage}')` : undefined }}
+      className="bg-cover bg-center text-white pt-12 md:pt-20 lg:pt-28.25"
+    >
+      <div className="max-w-360 w-full mx-auto overflow-hidden">
+        <div className="flex w-full px-4 xl:px-37 justify-between items-center mb-6 md:mb-7.5 ">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium font-poppins leading-118 -tracking-6">
+            Category Name
+          </h2>
+          <div className="flex gap-2 md:gap-2.75">
+            <div
+              ref={prevRef}
+              className="p-[1.5px] bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0)_100%)] rounded-[19px]"
+            >
+              <div className="rounded-[19px] bg-[#2C1638E5] h-11 w-11 md:h-15 md:w-15 flex justify-center items-center group cursor-pointer">
+                <Icons
+                  icon={"categoryArrow"}
+                  className={"rotate-180 duration-300 ease"}
+                  pathClass={"group-hover:fill-linear"}
+                />
+              </div>
+            </div>
+            <div
+              ref={nextRef}
+              className="p-[1.5px] bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0)_100%)] rounded-[19px]"
+            >
+              <div className="rounded-[19px] cursor-pointer bg-[#2C1638E5] h-11 w-11 md:h-15 md:w-15 flex justify-center items-center group">
+                <Icons
+                  pathClass={"group-hover:fill-gradient duration-300 ease"}
+                  icon={"categoryArrow"}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={`${className}`}>
+          <Slider prevRef={prevRef} nextRef={nextRef} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SliderWrapper;

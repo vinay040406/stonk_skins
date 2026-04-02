@@ -10,12 +10,14 @@ import Category from "./Category";
 
 const Navbar = () => {
   const inputRef = useRef();
-  const [isActive, setIsActive] = useState(0);
+  const arrowRef = useRef();
+  const [isActive, setIsActive] = useState(null);
+
   const [hamburgerState, setHamburgerState] = useState(false);
 
-  // useEffect(() => {
-  //   setIsActive(null);
-  // }, []);
+  useEffect(() => {
+    setIsActive(null);
+  }, []);
 
   const handleSearch = () => {
     inputRef.current.focus();
@@ -25,10 +27,20 @@ const Navbar = () => {
     setIsActive((prev) => (prev === index ? null : index));
   };
 
+  const handleArrow = () => {
+    arrowRef.current.style.transform =
+      arrowRef.current.style.transform === "rotate(180deg)"
+        ? "rotate(0deg)"
+        : "rotate(180deg)";
+  };
+
   const handleHamburger = () => setHamburgerState(!hamburgerState);
+
   return (
-    <div className="w-full fixed top-0 bg-violet backdrop-blur-[10px] px-4 py-3 border-b border-b-white">
-      <div className="max-w-287 w-full flex flex-col mx-auto gap-4">
+    <div
+      className={`w-full fixed top-0 z-50 backdrop-blur-[10px] px-4 py-2 md:py-3 border-b border-b-white/15`}
+    >
+      <div className="max-w-287 w-full flex flex-col mx-auto gap-4 relative font-dm-sans">
         <div className="flex justify-between mx-auto w-full items-center">
           <div className="flex gap-7.75 items-center">
             <Link
@@ -67,52 +79,68 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className={` w-full lg:flex flex-col items-center lg:flex-row hidden menu justify-between text-white  ${hamburgerState ? "show" : "max-w-83.75"}`}
+            className={` w-full lg:flex flex-col items-center lg:flex-row hidden menu justify-between text-white  ${hamburgerState ? "show opacity-100" : "max-w-83.75 opacity-0 lg:opacity-100"}`}
           >
-            <span className="font-medium">Market</span>
-            <div className="flex lg:flex-row flex-col gap-8">
-              <p className="flex items-center gap-2 cursor-pointer justify-center">
-                <Icons
-                  icon={"wallet"}
-                  pathClass={` ${hamburgerState ? "fill-black" : ""}`}
-                />
+            <span
+              onClick={() => setHamburgerState(false)}
+              className="font-medium cursor-pointer"
+            >
+              Market
+            </span>
+            <div className="flex lg:flex-row flex-col lg:gap-8 gap-2">
+              <p
+                onClick={() => setHamburgerState(false)}
+                className="flex items-center gap-2 cursor-pointer justify-center"
+              >
+                <Icons icon={"wallet"} />
                 <span className="font-bold leading-150">$0</span>
               </p>
               <div
-                className={`flex items-center cursor-pointer ${hamburgerState ? "text-black flex-col text" : "text-white flex-row"}`}
+                onClick={() => setHamburgerState(false)}
+                className={`flex items-center cursor-pointer ${hamburgerState ? "text-white text" : "text-white flex-row"}`}
               >
                 <span className="leading-90 mr-2">John Doe</span>
                 <Icons
                   icon={"user"}
-                  pathClass={`${hamburgerState ? "fill-black" : "fill-white"}`}
                   className={`h-4.5 w-4.5 ${hamburgerState ? "fill-black" : "fill-white"}  `}
                 />
-                <Icons icon={"arrow"} className="ml-1" />
+                <Icons
+                  onClick={handleArrow}
+                  ref={arrowRef}
+                  icon={"arrow"}
+                  className="ml-1 duration-200 ease-in"
+                />
               </div>
             </div>
           </div>
-          <Icons
-            icon={"search"}
-            onClick={handleSearch}
-            pathClass={` ${hamburgerState ? "stroke-black" : ""}`}
-            className="md:hidden flex cursor-pointer fixed right-[15%] z-10 "
-          />
-          {hamburgerState ? (
-            <RxCross2
-              onClick={handleHamburger}
-              className="lg:hidden block text-2xl  z-20"
+          <div className="lg:hidden flex  relative w-auto z-20">
+            <Image
+              src={"/images/webp/Union.webp"}
+              height={52}
+              width={103}
+              className=""
+              alt="union"
             />
-          ) : (
-            <GiHamburgerMenu
-              onClick={handleHamburger}
-              className="lg:hidden block text-2xl text-white"
+            <Icons
+              icon={"search"}
+              onClick={handleSearch}
+              className="md:hidden flex  absolute cursor-pointer left-[15%] top-[25%] z-10 "
             />
-          )}
+            {hamburgerState ? (
+              <RxCross2
+                onClick={handleHamburger}
+                className="lg:hidden block absolute text-white right-[15%] top-[28%] md:top-[25%] text-xl md:text-2xl  z-20"
+              />
+            ) : (
+              <GiHamburgerMenu
+                onClick={handleHamburger}
+                className="lg:hidden block absolute text-xl md:text-2xl right-[15%] top-[28%] md:top-[25%] text-white"
+              />
+            )}
+          </div>
         </div>
-        <div className="mx-auto  w-full flex flex-wrap border-t border-t-#43344C8C pt-3.5 pb-1.5">
-          <ul
-            className={`grid grid-cols-2 ms:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 relative  w-full gap-8.25 `}
-          >
+        <div className="mx-auto  w-full flex overflow-scroll lg:overflow-auto border-t border-t-[#43344C8C] py-1 md:pt-3.5 md:pb-1.5">
+          <ul className={`flex   w-full gap-8.25`}>
             {CATEGORY_DATA.map((item, index) => (
               <li
                 onClick={() => handleLiClick(index)}
@@ -141,12 +169,11 @@ const Navbar = () => {
                 </span>
               </li>
             ))}
-
             {isActive !== null && (
-              <div
-                className={`absolute h-[40vh] border border-white xl:h-auto md:w-auto w-[90vw] overflow-scroll xl:overflow-auto rounded-3xl top-full mt-4.5 bg-[#2C1638E5] py-5.75 lg:pl-9.75 px-4 plg:r-6.5`}
-              >
-                <Category />
+              <div className="p-[1.5px] rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0)_100%)] absolute top-full  mt-2.5  max-w-screen xl:max-w-none -translate-x-4 lg:translate-x-0 ">
+                <div className="lg:w-auto rounded-3xl bg-[#2C1638E5] py-2 px-3 lg:py-5.75 lg:pl-9.75  lg:pr-6.5 overflow-x-scroll xl:overflow-auto ">
+                  <Category />
+                </div>
               </div>
             )}
           </ul>

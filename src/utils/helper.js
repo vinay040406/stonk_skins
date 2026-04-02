@@ -96,3 +96,62 @@ export const CATEGORY_DATA = [
     ],
   },
 ];
+
+export const HERO_DATA = [
+  {
+    svg: "rightArrow",
+    title: "Fast Transactions",
+  },
+  {
+    svg: "verified",
+    title: "Verified Users",
+  },
+  {
+    svg: "support",
+    title: "24/7 Support",
+  },
+  {
+    svg: "hiddenFees",
+    title: "No Hidden Fees",
+  },
+];
+
+export const SLIDER_DATA = [
+  {
+    image: "/images/webp/weapon.webp",
+    tradable: "TRADABLE",
+    productName: "Product Name",
+    description: "Lorem ipsum dolor sit",
+    suggestedPrice: "Suggested Price $687.58",
+    price: "$528.69",
+    discount: "-20%",
+  },
+  {
+    image: "/images/webp/weapon2.webp",
+    tradable: "TRADABLE",
+    productName: "Product Name",
+    description: "Lorem ipsum dolor sit",
+    suggestedPrice: "Suggested Price $687.58",
+    price: "$528.69",
+    discount: "-20%",
+  },
+
+  {
+    image: "/images/webp/weapon3.webp",
+    tradable: "TRADABLE",
+    productName: "Product Name",
+    description: "Lorem ipsum dolor sit",
+    suggestedPrice: "Suggested Price $687.58",
+    price: "$528.69",
+    discount: "-20%",
+  },
+  {
+    image: "/images/webp/weapon4.webp",
+    tradable: "TRADABLE",
+    productName: "Product Name",
+    description: "Lorem ipsum dolor sit",
+    suggestedPrice: "Suggested Price $687.58",
+    price: "$528.69",
+    discount: "-20%",
+  },
+];

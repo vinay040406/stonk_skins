@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-* {
-  font-family: "DM Sans", sans-serif;
-}
-
 @theme {
   /* Colors */
   --color-white: #f5f5f5;
@@ -13,11 +9,14 @@
   --color-category-border: #432755;
   --color-linear: #e9ad83;
   --color-gradient: #9b1fe8;
+  --color-purple: #1c0829;
+  --color-red: #ff6565;
 
   /* Line Height */
   --leading-90: 90%;
   --leading-100: 100%;
   --leading-110: 110%;
+  --leading-118: 118%;
   --leading-120: 120%;
   --leading-125: 125%;
   --leading-130: 130%;
@@ -28,10 +27,71 @@
   /* Font-Size */
   --text-custom-sm: 15px;
   --text-custom-xs: 13px;
+  --text-custom-3xl: 32px;
+  --text-custom-4xl: 40px;
+  --text-custom-6xl: 64px;
+
+  /* Font Family */
+  --font-dm-sans: var(--font-dm-sans);
+  --font-poppins: var(--font-poppins);
+
+  /* Letter-Spacing */
+  --tracking-6: 6%;
 }
 
 .background-image {
   background: url("/images/svg/input-bg.svg");
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gradient);
+  border-radius: 4px;
+}
+
+.absolute1 {
+  position: absolute;
+  right: 0;
+  top: 57%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  gap: 23px;
+  width: 100%;
+}
+
+.swiper-slide {
+  margin: 0 !important;
+  text-align: center;
+  font-size: 18px;
+  max-width: 369px;
+  border-radius: 24px;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+::selection {
+  background: white;
+  color: var(--color-gradient);
+}
+
+@media (max-width: 1024px) {
+  .swiper-wrapper {
+    gap: 10px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -45,8 +105,8 @@
     justify-content: center;
     left: 0;
     gap: 10px;
-    background: white;
-    color: black;
+    background: var(--color-violet);
+
     transform: translateX(300%);
     transition: all 0.4s ease-in-out;
   }
