@@ -19,6 +19,10 @@ const Navbar = () => {
     setIsActive(null);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = hamburgerState ? "hidden" : "auto";
+  });
+
   const handleSearch = () => {
     inputRef.current.focus();
   };

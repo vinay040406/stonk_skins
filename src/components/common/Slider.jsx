@@ -7,7 +7,7 @@ import Image from "next/image";
 import Icons from "./Icons";
 import { Navigation, Autoplay } from "swiper/modules";
 
-const Slider = ({ prevRef, nextRef, onSwiperInit }) => {
+const Slider = ({ prevRef, nextRef, onSwiperInit, slidesPerView }) => {
   return (
     <Swiper
       slidesPerView={1.5}
@@ -17,7 +17,7 @@ const Slider = ({ prevRef, nextRef, onSwiperInit }) => {
         640: { slidesPerView: 1.8 },
         768: { slidesPerView: 2.2 },
         1024: { slidesPerView: 2.8 },
-        1280: { slidesPerView: 3.15 },
+        1280: slidesPerView,
       }}
       modules={[Navigation, Autoplay]}
       loop={true}
@@ -51,8 +51,9 @@ const Slider = ({ prevRef, nextRef, onSwiperInit }) => {
     >
       {SLIDER_DATA.map((item, index) => (
         <SwiperSlide key={index}>
-          <div className="p-[1.5px] rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0)_100%)]">
-            <div className="rounded-3xl cursor-pointer group w-full text-left duration-200 ease-in px-3 pt-3 pb-5.5 bg-[#2C1638]">
+          <div className="p-[1.5px] rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0)_100%)] ">
+            {/* border border-transparent hover:border-linear duration-300 ease-in  */}
+            <div className="rounded-3xl cursor-pointer group w-full text-left duration-200 ease-in px-3 pt-3 pb-5.5 bg-[#2C1638]/85">
               <div className="w-full min-h-44 sm:min-h-48 md:min-h-52 lg:min-h-55.25 bg-purple flex relative justify-center items-center rounded-3xl">
                 <div className="w-4/5 min-h-22.75 h-full relative">
                   <Image
@@ -87,7 +88,7 @@ const Slider = ({ prevRef, nextRef, onSwiperInit }) => {
                   </div>
                 </div>
                 <div className="p-[1.5px] bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0)_100%)] rounded-full h-11 md:h-16 ">
-                  <div className="rounded-full bg-[#2C1638E5] h-10 md:h-15.5 w-10 md:w-15.5 flex justify-center items-center group duration-300 ease hover:bg-white hover:text-gradient">
+                  <div className="rounded-full bg-[#2C1638E5] backdrop-blur-[50px] h-10 md:h-15.5 w-10 md:w-15.5 flex justify-center items-center group duration-300 ease hover:bg-white hover:text-gradient ">
                     <Icons
                       icon={"shoppingBag"}
                       className={"h-4 md:h-6 w-4 md:w-6 duration-200 ease-in"}

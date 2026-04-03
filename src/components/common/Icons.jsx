@@ -340,6 +340,72 @@ const Icons = ({ icon, pathClass, className, onClick, ref }) => {
         />
       </svg>
     ),
+    star: (
+      <svg
+        className={className}
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#E9AD83" />
+            <stop offset="100%" stopColor="#9B1FE8" />
+          </linearGradient>
+        </defs>
+        <path
+          className={pathClass}
+          d="M20 27.3522L26.0833 25.7233L28.625 34L20 27.3522ZM34 16.6541H23.2917L20 6L16.7083 16.6541H6L14.6667 23.2579L11.375 33.9119L20.0417 27.3082L25.375 23.2579L34 16.6541Z"
+          fill="white"
+        />
+      </svg>
+    ),
+    violetStar: (
+      <svg
+        className={className}
+        width="14"
+        height="14"
+        viewBox="0 0 14 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 10.6761L10.0417 9.86164L11.3125 14L7 10.6761ZM14 5.32704H8.64583L7 0L5.35417 5.32704H0L4.33334 8.62893L2.6875 13.956L7.02083 10.6541L9.6875 8.62893L14 5.32704Z"
+          fill="url(#paint0_linear_4752_4)"
+        />
+        <path
+          d="M7 10.6761L10.0417 9.86164L11.3125 14L7 10.6761ZM14 5.32704H8.64583L7 0L5.35417 5.32704H0L4.33334 8.62893L2.6875 13.956L7.02083 10.6541L9.6875 8.62893L14 5.32704Z"
+          fill="url(#paint1_linear_4752_4)"
+          fillOpacity="0.15"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_4752_4"
+            x1="-8.60625e-08"
+            y1="0.745902"
+            x2="7.41839"
+            y2="16.0729"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#E9AD83" />
+            <stop offset="1" stopColor="#9B1FE8" />
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear_4752_4"
+            x1="7"
+            y1="0"
+            x2="7"
+            y2="14"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#BEBEBE" />
+            <stop offset="0.84" stopColor="white" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+    ),
   };
 
   return iconList[icon] || null;

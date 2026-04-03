@@ -155,3 +155,18 @@ export const SLIDER_DATA = [
     discount: "-20%",
   },
 ];
+
+export const HOW_IT_WORKS_DATA = [
+  {
+    heading: "Deposit Your Skins",
+    description: "Add your CS 2 skins to the marketplace in seconds.",
+  },
+  {
+    heading: "Set Your Price",
+    description: "Choose your listing price or let us recommend market rates.",
+  },
+  {
+    heading: "Step 3",
+    description: "Receive instant payouts in your preferred method.",
+  },
+];
