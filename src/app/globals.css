@@ -13,6 +13,7 @@
   --color-red: #ff6565;
 
   /* Line Height */
+  --leading-20: 20px;
   --leading-90: 90%;
   --leading-100: 100%;
   --leading-110: 110%;
@@ -87,6 +88,26 @@
 ::selection {
   background: white;
   color: var(--color-gradient);
+}
+
+.li {
+  position: relative;
+  width: fit-content;
+}
+
+.li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--color-linear);
+  transition: width 0.3s ease;
+}
+
+.li:hover::before {
+  width: 100%;
 }
 
 @media (max-width: 1024px) {

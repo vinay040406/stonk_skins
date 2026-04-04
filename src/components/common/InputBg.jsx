@@ -5,7 +5,7 @@ const InputBg = ({ className }) => {
     <button
       style={{ backgroundImage: `url('/images/webp/input-bg.webp')` }}
       className={`flex
-     relative cursor-pointer z-30 w-full transition-all h-13 px-5 lg:pr-5.25 lg:pl-8.5 items-center justify-between duration-300 hover:-translate-y-1 max-w-61.25  mt-6 md:mt-10.25 font-dm-sans ${className}`}
+     relative cursor-pointer z-30 w-full transition-all h-13 px-5 lg:pr-5.25 lg:pl-8.5 items-center justify-between duration-300 hover:-translate-y-1 max-w-61.25  font-dm-sans ${className}`}
     >
       <span
         className=" left-[15%] top-[30%] font-dm-sans

@@ -170,3 +170,56 @@ export const HOW_IT_WORKS_DATA = [
     description: "Receive instant payouts in your preferred method.",
   },
 ];
+
+export const ACCORDIAN_DATA = [
+  {
+    title: "Nunc pellentesque consectetur",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Cursus habitant ornare pellentesque egestas. Consectetur blandit justo bibendum quam. Pharetra nulla tortor viverra hendrerit ipsum donec eget venenatis. Lobortis nec augue et sed ut. Blandit convallis eget laoreet urna. A tristique vitae arcu augue mauris vel lacus proin. Tincidunt dui velit faucibus magna nunc porta amet sed. Ornare amet sagittis ut amet facilisis lectus. Amet eu a urna erat hac.",
+  },
+  {
+    title: "In donec in tristique integer",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Cursus habitant ornare pellentesque egestas. Consectetur blandit justo bibendum quam. Pharetra nulla tortor viverra hendrerit ipsum donec eget venenatis. Lobortis nec augue et sed ut. Blandit convallis eget laoreet urna. A tristique vitae arcu augue mauris vel lacus proin. Tincidunt dui velit faucibus magna nunc porta amet sed. Ornare amet sagittis ut amet facilisis lectus. Amet eu a urna erat hac.",
+  },
+  {
+    title: "Nunc porta pellentesque",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Cursus habitant ornare pellentesque egestas. Consectetur blandit justo bibendum quam. Pharetra nulla tortor viverra hendrerit ipsum donec eget venenatis. Lobortis nec augue et sed ut. Blandit convallis eget laoreet urna. A tristique vitae arcu augue mauris vel lacus proin. Tincidunt dui velit faucibus magna nunc porta amet sed. Ornare amet sagittis ut amet facilisis lectus. Amet eu a urna erat hac.",
+  },
+  {
+    title: "Aliquam mauris tempus ullamcorper",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Cursus habitant ornare pellentesque egestas. Consectetur blandit justo bibendum quam. Pharetra nulla tortor viverra hendrerit ipsum donec eget venenatis. Lobortis nec augue et sed ut. Blandit convallis eget laoreet urna. A tristique vitae arcu augue mauris vel lacus proin. Tincidunt dui velit faucibus magna nunc porta amet sed. Ornare amet sagittis ut amet facilisis lectus. Amet eu a urna erat hac.",
+  },
+];
+
+export const SOCIAL_LINKS = ["facebook", "twitter", "youtube", "linkedIn"];
+
+export const USEFUL_LINKS_FIRST = [
+  "Legal & Privacy",
+  "Contact",
+  "Gift Card",
+  "Customer Service",
+];
+export const USEFUL_LINKS_SECOND = [
+  "FAQ",
+  "Support",
+  "Terms od service",
+  "Privacy",
+];
+
+export const PAYMENT_TEXT_DATA = [
+  "Payment",
+  "Gift Cards",
+  "Privacy Policy",
+  "Stockists",
+];
+
+export const PAYMENT_ICONS_DATA = [
+  "paypal",
+  "visa",
+  "masterCard",
+  "americanExpress",
+  "discover",
+];

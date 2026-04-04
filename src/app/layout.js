@@ -2,6 +2,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar";
 import { Poppins } from "next/font/google";
+import Footer from "@/components/common/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col bg-[#220C30] h-auto w-full">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

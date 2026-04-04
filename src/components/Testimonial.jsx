@@ -12,7 +12,10 @@ const Testimonial = () => {
   return (
     <div className="max-w-360 w-full mx-auto overflow-hidden text-white mt-15.75 lg:px-0 px-4">
       <div className="flex w-full px-0 lg:px-4 xl:px-37 justify-between items-center ">
-        <Title text={"Testimonials"} />
+        <Title
+          text={"Testimonials"}
+          className={"text-custom-4xl lg:text-5xl "}
+        />
         <div className="flex gap-2 md:gap-2.75">
           <div
             ref={prevRef}
@@ -57,7 +60,7 @@ const Testimonial = () => {
                   <Icons
                     key={index}
                     icon={"star"}
-                    className={"h-8.5 w-8.5 md-h-10 md-w-10 "}
+                    className={"h-8.5 w-8.5 md:h-10 md:w-10 "}
                   />
                 ))}
               </div>

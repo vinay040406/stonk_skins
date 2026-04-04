@@ -21,7 +21,7 @@ const Hero = () => {
               Buy, sell, and trade skins securely with unbeatable prices and
               transparency
             </p>
-            <InputBg />
+            <InputBg className={"mt-6 md:mt-10.25 "} />
           </div>
           <div className="p-[1.5px] rounded-3xl  bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_100%)] ">
             <div className="backdrop-blur-[50px] border-[1.5px] border-white/35 w-full py-3 lg:py-6.75 lg:px-8 px-4 rounded-3xl">

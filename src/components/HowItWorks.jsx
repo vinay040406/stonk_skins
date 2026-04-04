@@ -10,7 +10,7 @@ const HowItWorks = () => {
       style={{
         backgroundImage: `url("/images/webp/how-it-works-bg-img.webp")`,
       }}
-      className="w-full bg-center bg-cover flex flex-col justify-center items-center text-white relative pt-20 md:pt-42.25 pb-23.25 md:pb-56.75 px-4 before:absolute before:inset-0 before:bg-linear-to-b before:from-black/40 before:via-transparent before:to-black/40 before:z-10"
+      className="w-full bg-center bg-cover flex flex-col justify-center items-center text-white relative pt-20 md:pt-42.25 pb-23.25 md:pb-56.75 px-4 before:absolute before:inset-0 before:bg-linear-to-b before:from-black/25 before:via-transparent before:to-black/25 before:z-10"
     >
       <Image
         src={"/images/webp/how-it-works1.webp"}
@@ -26,7 +26,7 @@ const HowItWorks = () => {
         className="absolute right-0 bottom-0 w-1/3 sm:w-2/5 md:w-1/2 lg:w-147.25 h-auto"
         alt="how-it-works2"
       />
-      <Title text={"How It Works"} className={""} />
+      <Title text={"How It Works"} className={"text-custom-3xl md:text-4xl lg:text-5xl z-20"} />
       <div className="flex md:flex-row flex-col gap-7.75 md:gap-0 items-center justify-between max-w-285 w-full mx-auto mt-5.5 font-poppins z-30 relative overflow-hidden">
         <span
           className="border border-dashed border-[#FFFFFF4F] absolute 
@@ -52,7 +52,7 @@ const HowItWorks = () => {
           </div>
         ))}
       </div>
-      <InputBg className={"mt-27.5 md:mt-10"} />
+      <InputBg />
     </div>
   );
 };
