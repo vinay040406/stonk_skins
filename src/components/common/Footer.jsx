@@ -31,7 +31,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-3">
             {SOCIAL_LINKS.map((link, index) => (
-              <Link href={link} key={index}>
+              <Link href={link} key={index} aria-label={link}>
                 <span className="h-8 w-8 rounded-full bg-linear-to-r from-linear to-gradient flex justify-center items-center group hover:scale-120 duration-300 ease-in">
                   <Icons
                     icon={link}
@@ -43,9 +43,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-8">
-          <h5 className="text-xl font-poppins font-semibold -tracking-6 leading-118 ">
+          <h6 className="text-xl font-poppins font-semibold -tracking-6 leading-118 ">
             Useful Links
-          </h5>
+          </h6>
           <div className="flex gap-16 md:gap-8 lg:gap-20.25">
             <div className="flex flex-col gap-3">
               {USEFUL_LINKS_FIRST.map((link, index) => (
@@ -88,7 +88,11 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="absolute inset-0 w-full pl-8 pr-23 outline-none font-dm-sans leading-100 -tracking-6 font-medium"
               />
-              <button type="submit" id="newsletter">
+              <button
+                type="submit"
+                id="newsletter"
+                aria-label="Subscribe to Newsletter"
+              >
                 <Icons
                   icon={"newsletter"}
                   className={"absolute right-[3.8%] top-[35%] cursor-pointer"}

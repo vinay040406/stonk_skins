@@ -37,9 +37,9 @@ const Hero = () => {
                         className={" h-5 md:h-6 w-5 md:w-6"}
                       />
                     </span>
-                    <h5 className="text-white font-medium text-sm md:text-base leading-100 -tracking-6">
+                    <h3 className="text-white font-medium text-sm md:text-base leading-100 -tracking-6">
                       {item.title}
-                    </h5>
+                    </h3>
                   </div>
                 ))}
               </div>

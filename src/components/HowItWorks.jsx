@@ -42,9 +42,9 @@ const HowItWorks = () => {
               0{index + 1}
             </span>
             <div className="flex flex-col max-w-[320px] w-full items-start md:text-center md:items-center ">
-              <h5 className="text-xl md:text-custom-3xl font-medium leading-118 -tracking-6 mt-6.25">
+              <h4 className="text-xl md:text-custom-3xl font-medium leading-118 -tracking-6 mt-6.25">
                 {item.heading}
-              </h5>
+              </h4>
               <p className="font-dm-sans font-medium leading-5  md:px-3 mt-3 sm:mt-7.25 md:mt-3.25">
                 {item.description}
               </p>
