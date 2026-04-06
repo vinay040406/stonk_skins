@@ -37,7 +37,7 @@ export default function Home() {
               src={"/images/webp/category2-layer.webp"}
               height={65}
               width={333}
-              className="absolute  hidden md:block   left-[31%] top-[21% lg:z-20 "
+              className="absolute  hidden md:block   left-[31%] top-[21%] lg:z-20 "
               alt="shining-ellipse"
             />
           }
@@ -69,6 +69,7 @@ export default function Home() {
         <Testimonial />
         <Accordian />
         <Trading />
+
         <Image
           src={"/images/webp/bottom-main-layer.webp"}
           className="absolute bottom-32.25 left-0 w-screen md:z-0 -z-1 pointer-none:"

@@ -30,12 +30,12 @@ const HowItWorks = () => {
       <div className="flex md:flex-row flex-col gap-7.75 md:gap-0 items-center justify-between max-w-285 w-full mx-auto mt-5.5 font-poppins z-30 relative overflow-hidden">
         <span
           className="border border-dashed border-[#FFFFFF4F] absolute 
-          left-5.75 sm:left-[26%] top-14 sm:top-17.25 h-[calc(100%-112px)] sm:h-[calc(100%-138px)] w-0
+          left-5.75 sm:left-[26%] top-14 sm:top-17.25 h-[calc(100%-120px)] sm:h-[calc(100%-138px)] w-0
           md:h-0 md:w-auto md:top-[15%] md:left-[15%] md:right-[15%]"
         ></span>
         {HOW_IT_WORKS_DATA.map((item, index) => (
           <div
-            className="flex flex-row md:flex-col items-center gap-3.75 md:gap-0 md:min-h-61.25"
+            className="flex flex-row md:flex-col items-center gap-3.75 md:gap-0 md:min-h-61.25 mb-8 md:mb-0 "
             key={index}
           >
             <span className="flex justify-center items-center h-13 w-14 sm:h-17.25 sm:w-17.25 rounded-4xl bg-linear-to-r from-linear to-gradient text-xl sm:text-custom-3xl font-medium text-center  -tracking-6 leading-118 z-20">
@@ -45,7 +45,7 @@ const HowItWorks = () => {
               <h5 className="text-xl md:text-custom-3xl font-medium leading-118 -tracking-6 mt-6.25">
                 {item.heading}
               </h5>
-              <p className="font-dm-sans font-medium leading-5  md:px-3 mt-7.25 md:mt-3.25">
+              <p className="font-dm-sans font-medium leading-5  md:px-3 mt-3 sm:mt-7.25 md:mt-3.25">
                 {item.description}
               </p>
             </div>

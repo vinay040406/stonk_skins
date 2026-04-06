@@ -11,6 +11,7 @@ import Category from "./Category";
 const Navbar = () => {
   const inputRef = useRef();
   const arrowRef = useRef();
+  const navRef = useRef();
   const [isActive, setIsActive] = useState(null);
 
   const [hamburgerState, setHamburgerState] = useState(false);
@@ -23,6 +24,15 @@ const Navbar = () => {
     document.body.style.overflow = hamburgerState ? "hidden" : "auto";
   });
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setIsActive(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   const handleSearch = () => {
     inputRef.current.focus();
   };
@@ -42,6 +52,7 @@ const Navbar = () => {
 
   return (
     <div
+      ref={navRef}
       className={`w-full fixed top-0 z-50 backdrop-blur-[10px] px-4 py-2 md:py-3 border-b border-b-white/15`}
     >
       <div className="max-w-287 w-full flex flex-col mx-auto gap-4 relative font-dm-sans">

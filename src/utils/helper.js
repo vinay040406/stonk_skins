@@ -154,6 +154,24 @@ export const SLIDER_DATA = [
     price: "$528.69",
     discount: "-20%",
   },
+  {
+    image: "/images/webp/weapon4.webp",
+    tradable: "TRADABLE",
+    productName: "Product Name",
+    description: "Lorem ipsum dolor sit",
+    suggestedPrice: "Suggested Price $687.58",
+    price: "$528.69",
+    discount: "-20%",
+  },
+  {
+    image: "/images/webp/weapon4.webp",
+    tradable: "TRADABLE",
+    productName: "Product Name",
+    description: "Lorem ipsum dolor sit",
+    suggestedPrice: "Suggested Price $687.58",
+    price: "$528.69",
+    discount: "-20%",
+  },
 ];
 
 export const HOW_IT_WORKS_DATA = [
