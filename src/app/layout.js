@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
     >
       <body className="flex flex-col bg-[#220C30] h-auto w-full">
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

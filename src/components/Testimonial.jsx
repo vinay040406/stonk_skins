@@ -45,9 +45,9 @@ const Testimonial = () => {
       <div className="w-full flex justify-end mb-6 md:mb-7.5 mt-8.75">
         <div className="max-w-7xl w-full flex flex-col items-center md:flex-row gap-8.25 md:gap-5.25">
           <div className="flex flex-col text-center max-w-79.25 md:min-w-79.75 w-full items-center py-12.5 px-4.75 bg-linear-to-b from-linear to-gradient rounded-[19px] gap-3.75">
-            <h6 className="text-custom-3xl font-poppins -tracking-6 leading-118 font-medium">
+            <h5 className="text-custom-3xl font-poppins -tracking-6 leading-118 font-medium">
               Excellent
-            </h6>
+            </h5>
             <Image
               src={"/images/webp/testimonial-icon.webp"}
               height={107}

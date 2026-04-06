@@ -88,7 +88,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="absolute inset-0 w-full pl-8 pr-23 outline-none font-dm-sans leading-100 -tracking-6 font-medium"
               />
-              <button type="submit">
+              <button type="submit" id="newsletter">
                 <Icons
                   icon={"newsletter"}
                   className={"absolute right-[3.8%] top-[35%] cursor-pointer"}
